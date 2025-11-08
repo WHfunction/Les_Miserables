@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レ・ミゼラブル_韓国語歌詞</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 基本設定 --- */
+        :root {
+            --primary-color: #334155; /* メインのテキスト色 (濃いグレー) */
+            --secondary-color: #64748b; /* サブのテキスト色 (読み方など) */
+            --bg-color: #f8fafc;        /* 背景色 (ごく薄いグレー) */
+            --card-bg-color: #ffffff;   /* カード背景色 (白) */
+            --header-bg-color: #ffffff; /* ヘッダー背景色 (白) */
+            --accent-color: #4a90e2;    /* アクセントカラー (リンクなど) */
+            --border-color: #e2e8f0;    /* 境界線 */
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.7;
+            padding-top: 80px; /* 固定ヘッダー分のスペース */
+        }
+
+        /* --- ヘッダー & ナビゲーション --- */
+        .header {
+            background-color: var(--header-bg-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* ハンバーガーメニュー（チェックボックス本体は隠す） */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* ハンバーガーアイコン */
+        .menu-btn {
+            display: none; /* スマホでのみ表示 */
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            position: relative;
+        }
+
+        .menu-btn span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+            position: absolute;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .menu-btn span:nth-child(1) { top: 5px; }
+        .menu-btn span:nth-child(2) { top: 13px; }
+        .menu-btn span:nth-child(3) { top: 21px; }
+
+        /* ナビゲーションメニュー */
+        .nav-menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin-left: 20px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- メインコンテンツ --- */
+        .main-content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .main-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .song-section {
+            background-color: var(--card-bg-color);
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .song-section h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .song-section p {
+            font-size: 1rem;
+            color: var(--secondary-color); /* 読み仮名を少し薄く */
+        }
+        
+        /* 韓国語の歌詞（1行目）を少し濃く */
+        .song-section p br + br {
+            margin-bottom: 10px; /* 歌詞ブロックごとの間隔 */
+        }
+        .song-section p b {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        /* CSSで歌詞の1行目と2行目を制御 */
+        .lyrics p {
+            line-height: 1.8;
+        }
+        .lyrics p::first-line {
+            font-weight: 500;
+            color: var(--primary-color);
+            font-size: 1.05rem;
+        }
+
+        /* --- フッター --- */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        /* --- レスポンシブ対応 (スマホ) --- */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px; /* ヘッダーの高さ */
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            /* ハンバーガーアイコンを表示 */
+            .menu-btn {
+                display: block;
+            }
+
+            /* ナビゲーションメニューを画面外に隠す */
+            .nav-menu {
+                position: fixed;
+                top: 60px;
+                left: -100%; /* 画面左外に隠す */
+                width: 100%;
+                height: calc(100vh - 60px);
+                background-color: var(--header-bg-color);
+                flex-direction: column;
+                padding: 30px;
+                transition: left 0.3s ease;
+            }
+
+            .nav-menu li {
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+            .nav-menu a {
+                font-size: 1.2rem;
+                color: var(--primary-color);
+            }
+
+            /* チェックボックスがオンになったらメニューを表示 */
+            #menu-toggle:checked ~ .nav-menu {
+                left: 0;
+            }
+
+            /* チェックボックスがオンの時のアイコン変化 (X印) */
+            #menu-toggle:checked ~ .menu-btn span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+            #menu-toggle:checked ~ .menu-btn span:nth-child(2) {
+                opacity: 0;
+            }
+            #menu-toggle:checked ~ .menu-btn span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+
+            .main-title {
+                font-size: 1.6rem;
+            }
+
+            .song-section {
+                padding: 20px;
+            }
+
+            .song-section h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">レ・ミゼラブル歌詞</a>
+        
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <ul class="nav-menu">
+            <li><a href="#song1">At the End of the Day</a></li>
+            <li><a href="#song2">Do You Hear the People Sing?</a></li>
+            <li><a href="#song3">Epilogue</a></li>
+        </ul>
+    </header>
+
+    <main class="main-content">
+        <h1 class="main-title">レ・ミゼラブル 韓国語歌詞</h1>
+
+        <section id="song1" class="song-section">
+            <h2>At the End of the Day / 하루가 끝나갈 무렵</h2>
+            <div class="lyrics">
+<p>
+하루가 끝나갈 무렵 너는 하루 더 늙어가지<br>
+ハルガ クンナガル ムリョプ ノヌン ハル ド ヌルゴガジ<br>
+<br>
+그게 이 가난한 사람들의 삶에 대해 네가 말할 수 있는 전부야<br>
+クゲ イ カナナン サラムドゥレ サルメ テヘ ニガ マラル ス インヌン チョンブヤ<br>
+<br>
+그 삶은 투쟁이고 전쟁이지<br>
+ク サルムン トゥジェンイゴ チョンジェンジ<br>
+<br>
+어느 누구도 줄 수 있는 게 없어<br>
+オヌ ヌグド チュル ス インヌン ゲ オプソ<br>
+<br>
+하루 더 이렇게 견디는 거, 그게 무슨 의미가 있을까?<br>
+ハル ド イロッケ キョンディヌン ゴ、 クゲ ムスン ウィミガ イッスルッカ？<br>
+<br>
+살 날이 하루 더 줄어드는 것 말고<br>
+サル ナリ ハル ド チュロドゥヌン ゴッ マルゴ<br>
+<br>
+하루가 끝나갈 무렵 하루 더 추워지네<br>
+ハルガ クンナガル ムリョプ ハル ド チュウォジネ<br>
+<br>
+네가 입은 옷은 냉기를 쫓아내지 못해<br>
+ニガ イブン オスン ネンギルル チョチャネジ モッテ<br>
+<br>
+정의롭다하는 자들은 서둘러 지나가지<br>
+チョンウィロプタハヌン チャドゥルン ソドゥルロ チナガジ<br>
+<br>
+그들은 어린 아이의 울부짖음을 듣지 않아<br>
+クドゥルン オリン アイエ ウルブジスムル トゥッチ アナ<br>
+<br>
+전염병이 빠르게 다가오고 사람들을 죽일 준비를 하네<br>
+チョニョムピョンイ パルゲ タガオゴ サラムドゥルル チュギル チュンビルル ハネ<br>
+<br>
+죽을 날이 하루 더 가까워 오고있어<br>
+チュグル ナリ ハル ド カッカウォ オゴイッソ<br>
+<br>
+하루가 끝나갈 무렵 또 다른 하루가 시작되네<br>
+ハルガ クンナガル ムリョプ ット タルン ハルガ シジャクドェネ<br>
+<br>
+아침에 태양은 떠오르길 기다리고 있지<br>
+アチメ テヤンウン ットオルギル キダリゴ イッチ<br>
+<br>
+모래를 으스러뜨리는 파도처럼<br>
+モレルル ウスロットゥリヌン パドチョロム<br>
+<br>
+<br>
+어느 때라도 불어닥칠 폭풍우처럼<br>
+オヌ ッテラド プロダクチル ポップンウチョロム<br>
+<br>
+땅 위에는 굶주림이 가득해<br>
+ッタン ウィエヌン クルムチュリミ カドゥケ<br>
+<br>
+여전히 받아야 할 심판이 있고<br>
+ヨジョニ パダヤ ハル シムパニ イッコ<br>
+<br>
+댓가를 치를 지옥이 있을거라네<br>
+テッカルル チルル チオギ イッスルコラネ<br>
+<br>
+하루가 끝나갈 무렵<br>
+ハルガ クンナガル ムリョプ<br>
+<br>
+하루가 끝날 무렵 너는 아무 것도 얻을 게 없지<br>
+ハルガ クンナル ムリョプ ノヌン アム ゴット オドゥル ケ オプソ<br>
+<br>
+엉덩이 붙이고 앉아 있어도 빵 한 조각 살 수가 없네<br>
+オンダンイ プチゴ アンジャ イッソド ッパン ハン チョガク サル スガ オムネ<br>
+<br>
+집에 가면 아이들이 있고<br>
+チベ カミョン アイグドゥリ イッコ<br>
+<br>
+그 아이들을 먹여야 하고<br>
+ク アイドゥルル モギョヤ ハゴ<br>
+<br>
+그래도 넌 운이 좋은 거야<br>
+クレド ノン ウニ チョウン ゴヤ<br>
+<br>
+직업과 침대가 있으니<br>
+チゴプグァ チムデガ イッスニ<br>
+<br>
+우리는 우리의 축복을 셈하고 있지<br>
+ウリヌン ウリエ チュッポグル セマゴ イッチ<br>
+<br>
+오늘 공장장이 얼마나 화가 나 있는지 봤어?<br>
+オヌル コンジャンジャンイ オルマナ ファガ ナ インヌンジ パッソ？<br>
+<br>
+역겨운 숨과 이리 저리 휘두르는 손으로<br>
+ヨッキョウン スムグァ イリ チョリ フィドゥルヌン ソヌロ<br>
+<br>
+그건 판틴이 그의 뜻대로 해주지 않아서야<br>
+クゴン パンティニ クエ トゥッテロ ヘジュジ アナソヤ<br>
+<br>
+그의 바지를 봐<br>
+クエ パジルル ボァ<br>
+<br>
+그가 어디에 있는지 보이지<br>
+クガ オディエ インヌンジ ポイジ<br>
+<br>
+<br>
+사장님 그는 절대 몰라<br>
+サジャンニム クヌン チョルテ モルラ<br>
+<br>
+공장장이 항상 달아올라 있다는 것을<br>
+コンジャンジャンイ ハンサン タラオルラ イッタヌン ゴスル<br>
+<br>
+판틴이 조심하지 않으면<br>
+パンティニ チョシマジ アヌミョン<br>
+<br>
+그녀가 어떻게 될 지 지켜보자<br>
+クニョガ オットッケ トェル ジ チキョボジャ<br>
+<br>
+그녀는 거리로 쫓겨나겠지<br>
+クニョヌン コリロ チョッキョナゲッチ<br>
+<br>
+하루가 끝날 무렵 또 다른 하루가 끝이 나네<br>
+ハルガ クンナル ムリョプ ット タルン ハルガ クチ ナネ<br>
+<br>
+주머니에는 일주일을 버틸 돈이 있어<br>
+チュモニエヌン イルチュイルル ポティル トニ イッソ<br>
+<br>
+집주인에게 주고 가게에서 물건을 사고<br>
+チプチュイネゲ チュゴ カゲエソ ムルゴヌル サゴ<br>
+<br>
+할 수 있는 한 이 중노동을 계속 한다네<br>
+ハル ス インヌン ハン イ チュンノドンウル ケソク ハンダネ<br>
+<br>
+쓰러질 때까지 중노동을 계속 한다네<br>
+ッスロジル ッテッカジ チュンノドンウル ケソク ハンダネ<br>
+<br>
+아니면 테이블에서 떨어지는 빵부스러기를 먹어야 해<br>
+アニミョン テイブルエソ ットロジヌン ッパンプスロギルル モゴヤ ヘ<br>
+<br>
+댓가를 치러야 한다네<br>
+テッカルル チロヤ ハンダネ<br>
+<br>
+하루가 끝나갈 무렵<br>
+ハルガ クンナガル ムリョプ<br>
+<br>
+이게 뭘까, 순결한 자매님<br>
+イゲ ムォルッカ、 スンギョラン チャメニム<br>
+<br>
+오, 판틴, 우리도 소식을 알자<br>
+オ、パンティン、 ウリド ソシグル アルジャ<br>
+<br>
+친애하는 판틴<br>
+チネハヌン パンティン<br>
+<br>
+돈을 보내주세요<br>
+トヌル ポネジュセヨ<br>
+<br>
+당신의 아이는 의사가 필요해요<br>
+タンシネ アイヌン ウィサガ ピリョヘヨ<br>
+<br>
+지체할 시간이 없습니다<br>
+チチェハル シガニ オプスムニダ<br>
+<br>
+<br>
+그 편지 이리 줘<br>
+ク ピョンジ イリ チュォ<br>
+<br>
+당신들이 상관할 일이 아니야<br>
+タンシンドゥリ サンクァンハル イリ アニヤ<br>
+<br>
+집에는 남편이 있고 애인도 있어<br>
+チベヌン ナムピョニ イッコ エインド イッソ<br>
+<br>
+여기 누구라도 신 앞에 맹세할 수 있어?<br>
+ヨギ ヌグラド シン アペ メンセハル ス イッソ？<br>
+<br>
+두려워 할 일이 없다고<br>
+トゥリョウォ ハル イリ オプタゴ<br>
+<br>
+숨길게 없다고<br>
+スムギルケ オプタゴ<br>
+<br>
+뭣 때문에 이렇게 싸우는 건가?<br>
+ムォッ テムネ イロッケ サウヌン ゴンガ？<br>
+<br>
+두 사람을 누가 좀 떼어놔주게<br>
+トゥ サラムル ヌガ チョム ッテオノァジュゲ<br>
+<br>
+여기는 공장이지 서커스가 아니라구<br>
+ヨギヌン コンジャンイジ ソコスガ アニラグ<br>
+<br>
+자, 진정하세요 부인들, 진정하세요<br>
+チャ、 チンジョンハセヨ プインドゥル、 チンジョンハセヨ<br>
+<br>
+나는 이 마을의 시장이고<br>
+ナヌン イ マウレ シジャンイゴ<br>
+<br>
+명성있는 사업가요<br>
+ミョンソンインヌン サオプカヨ<br>
+<br>
+공장장과 해결하세요<br>
+コンジャンジャングァ ヘギョラセヨ<br>
+<br>
+할 수 있는 한 참아보세요<br>
+ハル ス インヌン ハン チャマボセヨ<br>
+<br>
+알겠습니다 마들렌 시장님<br>
+アルゲッスムニダ マドゥルレン シジャンニム<br>
+<br>
+<br>
+난 개가 물 수도 있다는 걸 알았어야 했을지 몰라<br>
+ナン ケガ ムル スド イッタヌン ゴル アラッソヤ ヘッスルジ モルラ<br>
+<br>
+고양이에게 발톱이 있다는 걸 알았어야 했을지 몰라<br>
+コヤンイエゲ パルトビ イッタヌン ゴル アラッソヤ ヘッスルジ モルラ<br>
+<br>
+난 너의 작은 비밀을 알아차렸어야 했을 지 몰라<br>
+ナン ノエ チャグン ピミルル アラチャリョッソヤ ヘッスル ジ モルラ<br>
+<br>
+그래, 고결한 판틴<br>
+クレ、 コギョラン パンティン<br>
+<br>
+그렇게 순결하고 깨끗한 척 하더니<br>
+クロッケ スンギョラゴ ッケクッタン チョク ハドニ<br>
+<br>
+네가 바로 원인이었구나<br>
+ニガ パロ ウォニニオックナ<br>
+<br>
+의심할 여지도 없어<br>
+ウィシマル ヨジド オプソ<br>
+<br>
+여기서 일어나는 모든 일에 대해<br>
+ヨギソ イロナヌン モドゥン イレ テヘ<br>
+<br>
+낮에는 처녀인 척하는데<br>
+ナジェヌン チョニョイン チョカヌンデ<br>
+<br>
+밤에는 재촉할 필요도 없겠구나<br>
+パメヌン チェチョカル ピリョド オプケックナ<br>
+<br>
+그녀는 당신을 비웃어왔어요<br>
+クニョヌン タンシヌル ピウソワッソヨ<br>
+<br>
+다른 남자랑 함께 있으면서<br>
+タルン ナムジャラン ハムッケ イッスミョンソ<br>
+<br>
+그녀는 단지 문제만 일으킬거예요<br>
+クニョヌン タンジ ムンジェマン イルキルッコイェヨ<br>
+<br>
+그녀를 오늘 당장 내쫓아야해요<br>
+クニョルル オヌル タンジャン ネチョチャヤヘヨ<br>
+<br>
+오늘 당장 내쫓아요<br>
+オヌル タンジャン ネチョチャヨ<br>
+<br>
+하루가 끝나갈 무렵<br>
+ハルガ クンナガル ムリョプ<br>
+</p>
+            </div>
+        </section>
+
+        <section id="song2" class="song-section">
+            <h2>Do You Hear the People Sing? / 민중의 노래</h2>
+            <div class="lyrics">
+<p>
+투사의 노래가 들리나?<br>
+トゥサエ ノレガ トゥルリナ？<br>
+<br>
+그 목소리에 박동이 어우러져 울리면<br>
+ク モクソリエ パクトンイ オウロジョ ウルリミョン<br>
+<br>
+새로이 뜨거운 삶이 시작하리라<br>
+セロイ トゥゴウン サルミ シジャカリラ<br>
+<br>
+내일이 오면, 그래, 내일이<br>
+ネイルイ オミョン, クレ, ネイルイ<br>
+<br>
+우리 쪽에 줄을 서라<br>
+ウリ チョゲ チュルル ソラ<br>
+<br>
+장벽 너머에 세상이 있다<br>
+チャンビョン ノモエ セサンイ イッタ<br>
+<br>
+싸워라 그것이 자유로 가는 길이다<br>
+サウォラ クゴシ チャユロ カヌン キリダ<br>
+<br>
+투사의 노래가 들리나?<br>
+トゥサエ ノレガ トゥルリナ？<br>
+<br>
+그 목소리에 박동이 어우러져 울리면<br>
+ク モクソリエ パクトンイ オウロジョ ウルリミョン<br>
+<br>
+새로이 뜨거운 삶이 시작하리라<br>
+セロイ トゥゴウン サルミ シジャカリラ<br>
+<br>
+내일이 오면, 그래, 내일이<br>
+ネイルイ オミョン, クレ, ネイルイ<br>
+<br>
+쓰러져도 후회는 하지 마라<br>
+スロジョド フフェヌン ハジ マラ<br>
+<br>
+흘린 피는 밀려와 조국을 적시리라<br>
+フルリン ピヌン ミルリョワ チョググル チョクシリラ<br>
+<br>
+시체를 타넘어 내일의 프랑스를 개척하라<br>
+シチェルル タノモ ネイルエ プランスルル ケチョカラ<br>
+<br>
+투사의 노래가 들리나?<br>
+トゥサエ ノレガ トゥルリナ？<br>
+<br>
+그 목소리에 박동이 어우러져 울리면<br>
+ク モクソリエ パクトンイ オウロジョ ウルリミョン<br>
+<br>
+새로이 뜨거운 삶이 시작하리라<br>
+セロイ トゥゴウン サルミ シジャカリラ<br>
+<br>
+내일이 오면, 그래, 내일이<br>
+ネイルイ オミョン, クレ, ネイルイ<br>
+</p>
+            </div>
+        </section>
+        
+        <section id="song3" class="song-section">
+            <h2>Epilogue / 에필로그</h2>
+            <div class="lyrics">
+<p>
+<b>(장발장) (ジャン・バルジャン)</b><br>
+<br>
+어두운 밤 홀로 남아서<br>
+オドゥウン バム ホルロ ナマソ<br>
+<br>
+잠들 시간 되간다<br>
+チャムドゥル シガン トェガンダ<br>
+<br>
+꿈결 속에 나의 코젤<br>
+ックムギョル ソゲ ナエ コジェル<br>
+<br>
+내 죽음 앞에 우는데~<br>
+ネ チュグム アペ ウヌンデ～<br>
+<br>
+해질녘에 홀로남아 결혼식 축복합니다<br>
+ヘジルニョゲ ホルロナマ キョロンシク チュッポカムニダ<br>
+<br>
+주여 아이들 맡기고 이들 살피소서어어~~<br>
+チュヨ アイドゥル マッキゴ イドゥル サルピソソオオ～～<br>
+<br>
+내 주여~~ 나의~ 주여~~<br>
+ネ チュヨ～～ ナエ～ チュヨ～～<br>
+<br>
+저들을~ 돌보시고~~<br>
+チョドゥルル～ トルボシゴ～～<br>
+<br>
+내 영혼~~ 당~신의~~ 품~으로~~ 데려가~~<br>
+ネ ヨンホン～～ タン～シネ～～ プム～ウロ～～ テリョガ～～<br>
+<br>
+그곳에~ 집으로~<br>
+クゴセ～ チブロ～<br>
+<br>
+<br>
+<b>(판틴) (ファンティーヌ)</b><br>
+<br>
+은총 받으시길(준비됐어 판틴~~)<br>
+ウン총 パドゥシギル (チュンビドェッソ パンティン～～)<br>
+<br>
+짐은 내려놓아요~ (나의 마지막 날)<br>
+チムン ネリョノアヨ～ (ナエ マジマク ナル)<br>
+<br>
+코젤 돌본사람 (내 모든것였소)<br>
+コジェル トルボンサラム (ネ モドゥンゴショッソ)<br>
+<br>
+죽음 함께해요~~~<br>
+チュグム ハムッケヘヨ～～～<br>
+<br>
+<b>(코제트) (コゼット)</b><br>
+<br>
+아빠~아빠~ 어떻게 된거죠<br>
+アッパ～アッパ～ オットッケ トゥインゴジョ<br>
+<br>
+말도 없이 왜 떠나셨나요~~<br>
+マルド オプシ ウェ ットナションナヨ～～<br>
+<br>
+<b>(장발장) (ジャン・バルジャン)</b><br>
+<br>
+코젤. 아가. 널 다시보다니~<br>
+コジェル. アガ. ノル タシボダニ～<br>
+<br>
+부디 나를 용서해 주렴<br>
+プディ ナルル ヨンソヘ チュリョム<br>
+<br>
+<br>
+<b>(코제트) (コゼット)</b><br>
+<br>
+더 오래~~ 사셔야죠 아빠~~<br>
+ト オレ～～ サショヤジョ アッパ～～<br>
+<br>
+이별을 말하긴 일러요<br>
+イビョルル マラギン イルロヨ<br>
+<br>
+<b>(장발장) (ジャン・バルジャン)</b><br>
+<br>
+내 코젤 널 두고가다니...<br>
+ネ コジェル ノル トゥゴガダニ…<br>
+<br>
+해보마 그러마.<br>
+ヘボマ クロマ.<br>
+<br>
+펴 봐라, 내 마지막 참회록. 읽으렴..<br>
+ピョ ボァラ、 ネ マジマク チャムフェロク. イルグリョム..<br>
+<br>
+나만약 잠든다면<br>
+ナマニャク チャムドゥンダミョン<br>
+<br>
+널 사랑한 사람들의 이야기<br>
+ノル サランハン サラムドゥレ イヤギ<br>
+<br>
+니 엄만 널위해 죽고, 널 내게 맡겼단다<br>
+ニ オムマン ノルウィヘ チュッコ、 ノル ネゲ マッキョッタンダ<br>
+<br>
+<br>
+<b>(마리우스) (マリウス)</b><br>
+<br>
+용서를 구할 사람은 저죠~~<br>
+ヨンソルル クハル サラムン チョジョ～～<br>
+<br>
+그 날 제 생명 구해주셨죠~~<br>
+ク ナル チェ センミョン クヘジュショッチョ～～<br>
+<br>
+부디 오래 함께 살면서~~<br>
+プディ オレ ハムッケ サルミョンソ～～<br>
+<br>
+제 인생 이끌어주세요 한번 더<br>
+チェ インセン イックロジュセヨ ハンボン ド<br>
+<br>
+코젤 아버님은 제 은인~~<br>
+コジェル アボニムン チェ ウニン～～<br>
+<br>
+그 날 바리게이트, 죽을 이 목숨 구해서~<br>
+ク ナル パリゲイトゥ、 チュグル イ モクスム クヘソ～<br>
+<br>
+등에 업고서 집에왔지~~너에게~~<br>
+トゥンエ オプコソ チベワッチ～～ノエゲ～～<br>
+<br>
+<b>(장발장) (ジャン・バルジャン)</b><br>
+<br>
+우리 여기 함께있으니~~ 평화롭게~ 간다~~<br>
+ウリ ヨギ ハムッケイッスニ～～ ピョンファロプケ～ カンダ～～<br>
+<br>
+얼마나 좋은가~~~<br>
+オルマナ チョウンガ～～～<br>
+<br>
+<br>
+<b>(판틴) (ファンティーヌ)</b><br>
+<br>
+내게로 사슬을 떨쳐 버리고<br>
+ネゲロ サスルル ットルチョ ボリゴ<br>
+<br>
+슬픔은 멀리 멀리 보내요<br>
+スルプムン モルリ モルリ ポネヨ<br>
+<br>
+주님께선 자비로 살피시죠<br>
+チュニムッケソン チャビロ サルピシジョ<br>
+<br>
+<b>(장발장) (ジャン・バルジャン)</b><br>
+<br>
+제모든 죄를 사하시고 주의 영광으로<br>
+チェモドゥン チェルル サハシゴ チュエ ヨングァンウロ<br>
+<br>
+<b>(판틴, 에포닌) (ファンティーヌ, エポニーヌ)</b><br>
+<br>
+내 손을, 구세주께로 가요.<br>
+ネ ソヌル、 クセジュッケロ カヨ.<br>
+<br>
+그 사랑, 사랑은 끝이 없죠.<br>
+ク サラン、 サランウン ックチ オプチョ.<br>
+<br>
+<b>(장발장) (ジャン・バルジャン)</b><br>
+<br>
+기억하렴, 내가 보았던 진실<br>
+キオカリョム、 ネガ ポアットン チンシル<br>
+<br>
+<br>
+<b>(장발장, 판틴, 에포닌) (ジャン・バルジャン, ファンティーヌ, エポニーヌ)</b><br>
+<br>
+그 누군갈 사랑하면<br>
+ク ヌグンガル サランハミョン<br>
+<br>
+신의 얼굴 보리!<br>
+シネ オルグル ポリ！<br>
+<br>
+<b>(모든시민 앙졸라외청년군, 에포닌, 판틴, 발장, 코젤, 마...) (全ての市民、アンジョルラスと青年たち、エポニーヌ、ファンティーヌ、バルジャン、コゼット、マ...)</b><br>
+<br>
+너는 듣고 있는가?<br>
+ノヌン トゥッコ インヌンガ？<br>
+<br>
+어둠 속 길 잃은 우리<br>
+オドゥム ソク キル イルン ウリ<br>
+<br>
+어딘가 빛을 찾아 높이 오른 민중들 노래.<br>
+オディンガ ピチュル チャジャ ノピ オルン ミンジュンドゥル ノレ.<br>
+<br>
+세상 모든 절망들<br>
+セサン モドゥン チョルマンドゥル<br>
+<br>
+꺼지지 않을 저 불꽃<br>
+ッコジジ アヌル チョ プルッコッ<br>
+<br>
+어두운 밤을 끝내 태양처럼 뜨리.<br>
+オドゥウン パムル クンネ テヤンチョロム ットゥリ.<br>
+<br>
+하늘 정원 가득 찬<br>
+ハヌル チョンウォン カドゥク チャン<br>
+<br>
+자유로 살아가리라.<br>
+チャユロ サラガリラ.<br>
+<br>
+총칼 모두 버려두고,<br>
+チョンカル モドゥ ポリョドゥゴ、<br>
+<br>
+손을 잡고 걸으리.<br>
+ソヌル チャプコ コルリ.<br>
+<br>
+<br>
+그 사슬에 벗어나 자유를 찾으리다!<br>
+ク サスレ ポソナ チャユルル チャジュリダ！<br>
+<br>
+우리 함께 싸우자,<br>
+ウリ ハムッケ サウジャ、<br>
+<br>
+누가 나와 함께 하나?<br>
+ヌガ ナワ ハムッケ ハナ？<br>
+<br>
+어딘가 저 너머 장벽 지나<br>
+オディンガ チョ ノモ チャンビョク チナ<br>
+<br>
+오래 누릴 세상!<br>
+オレ ヌリル セサン！<br>
+<br>
+너는 듣고 있는가?<br>
+ノヌン トゥッコ インヌンガ？<br>
+<br>
+저 멀리 울린 북소리.<br>
+チョ モルリ ウルリン プクソリ.<br>
+<br>
+미래가 오는 소리,<br>
+ミレガ オヌン ソリ、<br>
+<br>
+내일 오는 소리!<br>
+ネイル オヌン ソリ！<br>
+<br>
+우리 함께 싸우자,<br>
+ウリ ハムッケ サウジャ、<br>
+<br>
+누가 나와 함께 하나?<br>
+ヌガ ナワ ハムッケ ハナ？<br>
+<br>
+어딘가 저 너머 장벽 지나<br>
+オディンガ チョ ノモ チャンビョク チナ<br>
+<br>
+오래 누릴 세상!<br>
+オレ ヌリル セサン！<br>
+<br>
+너는 듣고 있는가?<br>
+ノヌン トゥッコ インヌンガ？<br>
+<br>
+저 멀리 울린 북소리.<br>
+チョ モルリ ウルリン プクソリ.<br>
+<br>
+미래가 오는 소리,<br>
+ミレガ オヌン ソリ、<br>
+<br>
+<br>
+내일 오는 소리!<br>
+ネイル オヌン ソリ！<br>
+<br>
+아~~~아~~~아~~~~~<br>
+ア～～～ア～～～ア～～～～～<br>
+<br>
+새로운 날!<br>
+セロウン ナル！<br>
+</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>このページに誤りがあった場合においても、一切の責任を負いかねます。あらかじめご了承ください</p>
+        <p>2025_若狭裕人</p>
+    </footer>
+
+</body>
+</html>
